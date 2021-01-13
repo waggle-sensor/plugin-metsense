@@ -1,0 +1,15 @@
+{
+    "name": "metsense",
+    "description": "Plugin which uses BME280 sensor to provide basic meteorological data.",
+    "version": "0.0.1",
+    "sources": [
+        {
+            "architectures": [
+                "linux/amd64",
+                "linux/arm/v7",
+                "linux/arm64"
+            ],
+            "build_args": {}
+        }
+    ]
+}
