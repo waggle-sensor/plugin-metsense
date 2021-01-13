@@ -3,4 +3,5 @@ adafruit-circuitpython-bme680
 adafruit-circuitpython-busdevice
 Adafruit-PlatformDetect
 Adafruit-PureIO
+RPi.GPIO
 https://github.com/waggle-sensor/pywaggle/archive/v0.39.1.zip
