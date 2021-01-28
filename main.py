@@ -23,7 +23,7 @@ def main():
     logging.info("setting up i2c interface")
     i2c = I2C(board.SCL, board.SDA)
 
-    logging.info("setting up BME280 sensor")
+    logging.info("setting up BME680 sensor")
     bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c, address=args.address)
 
     # change this to match the location's pressure (hPa) at sea level
@@ -38,10 +38,10 @@ def main():
             bme680.pressure,
             bme680.altitude)
 
-        plugin.publish("env.temperature.bme280", bme680.temperature)
-        plugin.publish("env.relative_humidity.bme280", bme680.relative_humidity)
-        plugin.publish("env.pressure.bme280", bme680.pressure)
-        plugin.publish("env.altitude.bme280", bme680.altitude)
+        plugin.publish("env.temperature.bme680", bme680.temperature)
+        plugin.publish("env.relative_humidity.bme680", bme680.relative_humidity)
+        plugin.publish("env.pressure.bme680", bme680.pressure)
+        plugin.publish("env.altitude.bme680", bme680.altitude)
 
         time.sleep(args.rate)
 
