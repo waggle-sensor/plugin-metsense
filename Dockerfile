@@ -6,7 +6,7 @@ RUN apk add --no-cache i2c-tools
 # python packages
 COPY requirements.txt .
 RUN apk add --no-cache gcc musl-dev && \
-    pip3 install --no-cache-dir -r requirements.txt && \
+    CFLAGS="-fcommon" pip3 install --no-cache-dir -r requirements.txt && \
     apk del gcc musl-dev
 
 COPY . .
