@@ -1,7 +1,7 @@
 {
     "name": "metsense",
     "description": "Plugin which uses BME680 sensor to provide basic meteorological data.",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "sources": [
         {
             "architectures": [
