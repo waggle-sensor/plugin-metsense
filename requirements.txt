@@ -1,7 +1,1 @@
-Adafruit-Blinka
-adafruit-circuitpython-bme680
-adafruit-circuitpython-busdevice
-Adafruit-PlatformDetect
-Adafruit-PureIO
-RPi.GPIO
 https://github.com/waggle-sensor/pywaggle/archive/refs/tags/v0.40.4.zip
