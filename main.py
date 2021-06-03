@@ -33,12 +33,15 @@ def main():
 
     meta = {"sensor": args.name}
 
+    logging.info("will read iio sensor %s every %ss", args.name, args.rate)
+
     while True:
         time.sleep(args.rate)
+        logging.info("reading values")
         for path in device_path.glob("in_*_input"):
             key = path.name
             value = float(path.read_text())
-            plugin.publish(f"iio.{key}", meta=meta)
+            plugin.publish(f"iio.{key}", value, meta=meta)
 
 if __name__ == "__main__":
     main()
